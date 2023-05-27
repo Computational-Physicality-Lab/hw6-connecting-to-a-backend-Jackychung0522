@@ -20,15 +20,7 @@ function ShoppingCart(props) {
     //const [user, setUser] = useState("");
     const [subTotalPrice, setSubTotalPrice] = useState(0);
 
-    useEffect(() => {
-        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-            //setUser(user);
-
-
-        });
-
-        return () => unsubscribe();
-    }, []);
+ 
     useEffect(() => {
         const fetchCartItems = async () => {
             let userId = sessionStorage.getItem('userId');
