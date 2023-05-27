@@ -6,9 +6,11 @@ import routes from './AppRouter';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import firebase from 'firebase/compat/app';
 import 'firebase/firestore';
+import { collection, query, orderBy } from "firebase/firestore";
 import App from './App';
 import db from './index';
 import shirtbase from './assets/images/shirt-base.png';
+import shirts from './shared/shirts';
 function ShoppingCart(props) {
     // for (let i = 0; i < Cart.length; i++) {
     //     console.log(Cart[i].quantity);
@@ -33,7 +35,7 @@ function ShoppingCart(props) {
         const fetchCartItems = async () => {
             let userId = sessionStorage.getItem('userId');
             const cartItemsRef = db.collection(userId);
-            const snapshot = await cartItemsRef.get();
+            const snapshot = await cartItemsRef.orderBy("createdAt", "desc").get();
 
             const items = snapshot.docs.map((doc) => ({
                 id: doc.id,
@@ -87,7 +89,7 @@ function ShoppingCart(props) {
                 total = parseFloat(sub) + 6.95;
                 total = total.toFixed(2);
                 setTotalPrice(total);
-                console.log('Total Quantity:', totalPrice);
+                console.log('Total Price:', totalPrice);
             } catch (error) {
                 console.error('Error calculating total quantity:', error);
             }
@@ -165,7 +167,7 @@ function ShoppingCart(props) {
 
     console.log(nonPictureSrcList);
 
-
+   
 
 
 
@@ -180,7 +182,7 @@ function ShoppingCart(props) {
 
                     </div>
                     {/* <hr /> */}
-                    <div>
+                    <div className='"cartContainer"'>
                         {cartItems.length === 0 ? (
                             <div className='emptyCart'>
                                 <p>Your Cart is empty</p>
@@ -193,9 +195,9 @@ function ShoppingCart(props) {
 
                                         {cartItem.isPicture ? (
                                             <div>
-                                                <p>{cartItem.name}</p>
-                                                <div className="white-shirt">
-
+                                                <p id='cartItemName'>{cartItem.name}</p>
+                                                <div  className="white-shirt">
+                                                   
                                                     <img src={cartItem.src} alt={cartItem.alt_description} className="cartshirtbase" id='cartselectedImage' />
 
                                                     <img src={shirtbase} id="whiteClothingImage" alt="shirtbase" className="cartshirtbase" />
@@ -204,7 +206,8 @@ function ShoppingCart(props) {
                                         ) : (
                                             <div className="original-shirt">
                                                 <p>{cartItem.name}</p>
-                                                <img src={nonPictureSrcList.find((src) => src === cartItem.src)} alt="Image" />
+                                                
+                                                <img src={cartItem.selectedButton[cartItem.color].front} alt="Image" id="original-image" />
                                             </div>
                                         )}
 

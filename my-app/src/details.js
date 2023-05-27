@@ -53,17 +53,22 @@ function Details(props) {
       side: "front"
     }
     let nickname=""
+    let number=0
     if (shirtObject.shirt.name === "Beep Boop") {
          nickname= "beepboop";
+         number=0;
     }
     if(shirtObject.shirt.name === "Car-negie Mellon"){
       nickname= "car";
+      number=1;
     }
     if(shirtObject.shirt.name === "Forever Plaid"){
       nickname = "plaid";
+      number=2;
     }
     if(shirtObject.shirt.name === "Carnegie Mellon Melon"){
       nickname = "melon";
+      number=3;
     }
     let cartItem = {
       name:  shirtObject.shirt.name,
@@ -72,7 +77,9 @@ function Details(props) {
       price: selectedButton.price,
       quantity: selectedQuantity,
       src:"./assets/shirt_images/"+nickname+"-"+color+"-"+"front"+".png",
-      isPicture:false
+      isPicture:false,
+      selectedButton:selectedButton.colors,
+      createdAt:new Date()
     };
     //const unsplash = createApi({ accessKey: "QzlDf7ckHUDnJ6CJt-6gfdRGrzWavNCuyijZdgYC-Go" });
     //console.log("user", user.uid);

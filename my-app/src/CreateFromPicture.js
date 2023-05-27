@@ -52,7 +52,7 @@ function CreateFromPicture() {
             price: 20,
             quantity :selectedQuantity,
             isPicture:true,
-            
+            createdAt:new Date()
         };
         if(selectedImage!==null){
                 cartItem={
@@ -63,6 +63,7 @@ function CreateFromPicture() {
                 quantity :selectedQuantity,
                 src: selectedImage.urls.small,
                 isPicture:true,
+                createdAt:new Date()
             };
         }
         let userId=sessionStorage.getItem('userId');
