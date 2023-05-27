@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.T-SHIRTS {
+  display: flex;
+  flex-wrap: wrap;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #c51230 ;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+
+} 
+.footerStyle{
+  margin-left: 80px;
+  margin-right: 80px;
+  display: flex;
+}
+.footerText{
+  display: flex;
+  margin-left: 100px;
+  color: white;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  margin-top:0;
+  margin-left:80px;
+  margin-right:80px;
+  height: 40px ;
+}
+.h1text{
+  font-size: 18pt;
+  margin:auto;
+  font-family: "PMingLiU", sans-serif;
+}
+.section{
+  display: flex;
+  margin: 20px;
+}
+
+#one{
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 3px solid rgb(223, 9, 9);
+  border-radius: 10px;
+}
+#two{
+  margin-left: 100px;
+  margin-right:120px;
+  border: 3px solid rgb(223, 9, 9);
+  border-radius: 10px;
+}
+#theShirts{
+  margin: 0px;
+  width: 100%;
+}
+.backgroud{
+  opacity:0.5;
+  text-align:center;
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  flex-direction: column; /* 垂直排列圖片和文字 */
+}
+.block{
+  border: 3px solid rgb(223, 9, 9);
+  border-radius: 10px;
+  margin:20px;
+  
+}
+.divForBlocks{
+  display: inline-flex;
+}
+.OurTshirt{
+  font-size: 40px;
+}
+.productname{
+  font-size: 20px;
+  font-weight:lighter;
+  margin-left: 30px;
+  color: #c51230;
+} 
+.productbutton{
+  display: flex;
+  
+}
+.innerproductbutton{
+  border: 0;
+  background-color: #c51230;
+  width: 80px;
+  height:50px ;
+  border-radius: 10px;
+  color: white ;
+  margin:auto;
+  margin-bottom:10px ;
+  text-align: center;
+}
+.productdetailname{
+   font-size: 40px;
+   margin-left: 60px;
+} 
+.picture{
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.detail{
+  display: flex;
+}
+
+.colornumber{
+  margin-left: 30px;
+}
+
+.button{
+  border: 0px;
+  background-color: #c51230;
+  width: 80px;
+  height:50px ;
+  border-radius: 10px;
+  color: black ;
+  margin-left: 20px;
+}
+.colorbutton{
+  border-width: 1px;
+  border-color: black;
+  width: 80px;
+  height:50px ;
+  border-radius: 10px;
+  color: black ;
+  margin-left: 20px;
+
+}
+.button:hover{
+  color: aliceblue; 
+}
+.colorbutton:hover{
+  color: aliceblue;
+}
+.imgbutton{
+  border:0px;
+}
+
+a:hover{
+  color: aliceblue; 
+  text-shadow: 1px 1px #ccc;
+  
+}
+a{
+  text-decoration: none;
+}
+/*products*/
+
+.seePage{
+  border: 0;
+  background-color: #c51230;
+  width: 80px;
+  height:50px ;
+  border-radius: 10px;
+  color: white ;
+  margin:auto;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+/* details */
+.divforDirection{
+  display:inline-flex; 
+  text-align: left;
+  
+}
+.color{
+  font-size: 20px;
+  color: gray;
+  display: inline-flex;
+}
+.direction{
+  font-size: 20px;
+  color: gray;
+}
+.quantity{
+  font-size: 20px;
+  color: gray;
+  display: inline-flex;
+  margin-top: 20px;
+}
+.divforText{
+  margin-left: 20px;
+  text-align:left
+}
+.price{
+  font-size: 40px;
+  color: #c51230;
+}
+.intro{
+  font-size: 20px;
+  color: #c51230;
+  font-weight:lighter;
+
+}
+#quantity{
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 80px;
+  height:50px ;
+  border: 1px solid #c51230;
+  text-align: center;
+}
+.car{
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+#addToCart{
+  background-color: #ff0000;
+  border-radius: 10px;
+  width: 200px;
+  height:50px ;
+  border: 1px solid #ff0000;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.totalQuantity{
+  font-size: 20px;
+  color: gray;
+  display: inline-flex;
+  
+}
+.photo{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.replaceLogIn{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr; 
+  grid-gap: 10px; 
+}

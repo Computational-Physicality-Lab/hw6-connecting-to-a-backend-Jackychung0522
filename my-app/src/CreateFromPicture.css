@@ -1,0 +1,74 @@
+.createfrompicturepage{
+    display: flex;
+}
+.item {
+    flex: 1;
+    padding-bottom:150px;
+    
+  }
+.shirtbase{
+    position: absolute;
+  top: 10px;
+  left: 200px;
+  height: 200px;
+    
+}
+.shirtbase:nth-child(1){
+  z-index: 1;
+}
+.shirtbase:nth-child(2){
+    z-index: 0;
+  }
+#price{
+    color: red;
+    font-size: 30px;
+    margin-right: 130px;
+    margin-top: 10px;
+}
+
+#addtocart{
+    background-color: #ff0000;
+    border-radius: 10px;
+    width: 200px;
+    height:50px ;
+    border: 1px solid #ff0000;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 60px;
+}
+.image-grid{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+  
+.image-item {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+  }  
+.image-item-button{
+    margin: 10px;
+    
+}
+  
+.white-shirt{
+    position: relative;
+
+
+}
+.outofwhite-shirt{
+    margin-top: 200px;
+}
+#selectedImage{
+    width: 80px;
+    height: 80px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.hidden{
+  background-color: gray;
+  pointer-events: none;
+}

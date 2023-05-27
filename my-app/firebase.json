@@ -1,0 +1,24 @@
+{
+  "auth": {
+    "providers": [
+      {
+        "id": "google.com",
+        "clientId": "204208012371-r0gp9facndoat9cm82n3rabdl8bbijb6.apps.googleusercontent.com",
+        "clientSecret":""
+      }
+      
+    ]
+  },
+  "firestore": {
+    "rules": "(firestore.rules)",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "(build)",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
