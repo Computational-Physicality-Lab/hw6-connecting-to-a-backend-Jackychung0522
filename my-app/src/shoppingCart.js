@@ -6,11 +6,9 @@ import routes from './AppRouter';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import firebase from 'firebase/compat/app';
 import 'firebase/firestore';
-import { collection, query, orderBy } from "firebase/firestore";
-import App from './App';
+
 import db from './index';
 import shirtbase from './assets/images/shirt-base.png';
-import shirts from './shared/shirts';
 function ShoppingCart(props) {
     // for (let i = 0; i < Cart.length; i++) {
     //     console.log(Cart[i].quantity);
@@ -19,12 +17,12 @@ function ShoppingCart(props) {
     const [totalQuantity, setTotalQuantity] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     const [cartItems, setCartItems] = useState([]);
-    const [user, setUser] = useState("");
+    //const [user, setUser] = useState("");
     const [subTotalPrice, setSubTotalPrice] = useState(0);
 
     useEffect(() => {
         const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-            setUser(user);
+            //setUser(user);
 
 
         });
@@ -89,7 +87,7 @@ function ShoppingCart(props) {
                 total = parseFloat(sub) + 6.95;
                 total = total.toFixed(2);
                 setTotalPrice(total);
-                console.log('Total Price:', totalPrice);
+                
             } catch (error) {
                 console.error('Error calculating total quantity:', error);
             }
@@ -103,7 +101,7 @@ function ShoppingCart(props) {
     //     console.log(cart[i].price);
     // }
 
-    const selectedButton = JSON.parse(localStorage.getItem('selectedButton'))
+    //const selectedButton = JSON.parse(localStorage.getItem('selectedButton'))
     function handleContinueShopping() {
         localStorage.clear();
     }
@@ -205,9 +203,10 @@ function ShoppingCart(props) {
                                             </div>
                                         ) : (
                                             <div className="original-shirt">
-                                                <p>{cartItem.name}</p>
                                                 
-                                                <img src={cartItem.selectedButton[cartItem.color].front} alt="Image" id="original-image" />
+                                                <p>{cartItem.name}</p>
+                                                {/*eslint-disable-next-line*/}
+                                                <img src={cartItem.selectedButton[cartItem.color].front} alt="Image" id="original-image" /> 
                                             </div>
                                         )}
 

@@ -4,7 +4,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import React from 'react';
-import index from './index.js';
+// import index from './index.js';
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import route from './AppRouter';

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import routes from './AppRouter';
 import { v4 as uuidv4 } from 'uuid';
 import firebase from 'firebase/compat/app';
-import { createApi } from 'unsplash-js';
 import db from '.';
 
 function Details(props) {
@@ -52,23 +51,22 @@ function Details(props) {
       id: uuidv4(),
       side: "front"
     }
-    let nickname=""
-    let number=0
+    
     if (shirtObject.shirt.name === "Beep Boop") {
-         nickname= "beepboop";
-         number=0;
+         
+        
     }
     if(shirtObject.shirt.name === "Car-negie Mellon"){
-      nickname= "car";
-      number=1;
+     
+      
     }
     if(shirtObject.shirt.name === "Forever Plaid"){
-      nickname = "plaid";
-      number=2;
+      
+   
     }
     if(shirtObject.shirt.name === "Carnegie Mellon Melon"){
-      nickname = "melon";
-      number=3;
+     
+      
     }
     let cartItem = {
       name:  shirtObject.shirt.name,
@@ -76,7 +74,7 @@ function Details(props) {
       size: size,
       price: selectedButton.price,
       quantity: selectedQuantity,
-      src:"./assets/shirt_images/"+nickname+"-"+color+"-"+"front"+".png",
+      //src:"./assets/shirt_images/"+nickname+"-"+color+"-"+"front"+".png",
       isPicture:false,
       selectedButton:selectedButton.colors,
       createdAt:new Date()
@@ -108,11 +106,11 @@ function Details(props) {
 
 
   }
-  const shirtarray = ["beepboop", "car", "plaid", "melon"];
+  
   const dataArray = Object.keys(selectedButton.colors);
 
   useEffect(() => {
-
+    const shirtarray = ["beepboop", "car", "plaid", "melon"];
     localStorage.clear();
     localStorage.setItem("side", JSON.stringify("front"));
     localStorage.setItem("color", JSON.stringify("white"));
@@ -132,7 +130,7 @@ function Details(props) {
       newShirt = shirtarray[3];
     }
     setShirt(newShirt);
-  }, []);
+  }, [selectedButton,shirt]); 
 
   const handleColorChange = (selectedColor) => {
     localStorage.setItem("color", JSON.stringify(selectedColor));
@@ -159,7 +157,7 @@ function Details(props) {
       <div className="detail">
         <div className="divforImage">
           <p className="productdetailname">{selectedButton.name}</p>
-          <img src={selectedButton.colors[color][side]} className="picture" />
+          <img src={selectedButton.colors[color][side]} className="picture" alt="" />
         </div>
         <div className="divforText">
           <p className="price">{selectedButton.price}</p>

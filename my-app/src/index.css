@@ -256,3 +256,9 @@ a{
   grid-gap: 10px; 
 }
 
+.shoppingCar:hover .car {
+  transform: translateY(-5px);
+}
+.shoppingCar.disabled:hover .car {
+  transform: none;
+}
