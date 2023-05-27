@@ -205,7 +205,7 @@ function ShoppingCart(props) {
                                             <div className="original-shirt">
                                                 
                                                 <p>{cartItem.name}</p>
-                                                {/*eslint-disable-next-line*/}
+                                                {/* eslint-disable-next-line */}
                                                 <img src={cartItem.selectedButton[cartItem.color].front} alt="Image" id="original-image" /> 
                                             </div>
                                         )}
