@@ -71,7 +71,7 @@ function Header() {
       <div className="headerTitle">
         <p style={headerTitle}>Scotty Shirts U Illustrate(SSUI)</p>
       </div>
-      <div className={`shoppingCar ${!isLoggedIn ? 'disabled' : ''}`}ㄎ>
+      <div className={`shoppingCar ${!isLoggedIn ? 'disabled' : ''}`}>
         {isLoggedIn ? (
           <Link className="shoppingCar" to={routes.ShoppingCart}>
             <img src={cartimage} alt="image_description" className="car" />
