@@ -10,7 +10,7 @@ function Details(props) {
   const [color, setColor] = useState("white");
   const [side, setSide] = useState("front");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [selectedButton, setSelectedButton] = useState(
+  const [selectedButton] = useState(
     JSON.parse(localStorage.getItem("selectedButton"))
   );
   const [selectedSize, setSelectedSize] = useState("Size");
@@ -110,27 +110,17 @@ function Details(props) {
   const dataArray = Object.keys(selectedButton.colors);
 
   useEffect(() => {
-    const shirtarray = ["beepboop", "car", "plaid", "melon"];
+    
     localStorage.clear();
     localStorage.setItem("side", JSON.stringify("front"));
     localStorage.setItem("color", JSON.stringify("white"));
     localStorage.setItem("shirt", JSON.stringify({ shirt }));
     localStorage.setItem("selectedButton", JSON.stringify(selectedButton));
-    setColor(JSON.parse(localStorage.getItem('color')));
-    setSelectedButton(JSON.parse(localStorage.getItem('selectedButton')));
-    setSide(JSON.parse(localStorage.getItem('side')));
-    let newShirt;
-    if (selectedButton.name === "Beep Boop") {
-      newShirt = shirtarray[0];
-    } else if (selectedButton.name === "Car-negie Mellon") {
-      newShirt = shirtarray[1];
-    } else if (selectedButton.name === "Forever Plaid") {
-      newShirt = shirtarray[2];
-    } else if (selectedButton.name === "Carnegie Mellon Melon") {
-      newShirt = shirtarray[3];
-    }
-    setShirt(newShirt);
-  }, [selectedButton,shirt]); 
+    
+   
+  
+    // eslint-disable-next-line
+  }, []); 
 
   const handleColorChange = (selectedColor) => {
     localStorage.setItem("color", JSON.stringify(selectedColor));
