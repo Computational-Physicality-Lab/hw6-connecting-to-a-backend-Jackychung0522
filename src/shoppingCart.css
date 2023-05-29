@@ -109,8 +109,8 @@
   }
   #cartselectedImage{
     width: 80px;
-    height: 80px;
-    margin-top: 60px;
+    height:auto;
+    margin-top: 40px;
     margin-left: 60px;
   }
   
