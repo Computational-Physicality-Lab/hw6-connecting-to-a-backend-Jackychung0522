@@ -45,7 +45,7 @@
   
 .image-item {
     width: 150px;
-    height: 150px;
+    height: auto;
     object-fit: cover;
     margin: 10px;
   }  
@@ -64,7 +64,7 @@
 }
 #selectedImage{
     width: 80px;
-    height: 80px;
+    height: auto;
     margin-top: 60px;
     margin-left: 60px;
 }
