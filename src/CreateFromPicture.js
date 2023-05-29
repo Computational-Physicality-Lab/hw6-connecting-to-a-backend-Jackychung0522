@@ -133,7 +133,7 @@ function CreateFromPicture() {
 
                     </div>
                     <Link to={routes.ShoppingCart}>
-                        <button id='addtocart' onClick={handleAddToCart} disabled={!isLoggedIn || selectedSize === 'Size'}  >
+                        <button id='addtocart' onClick={handleAddToCart} disabled={!isLoggedIn || selectedSize === 'Size'||selectedImage==null}  >
                             Add to Cart
                         </button>
                     </Link>
